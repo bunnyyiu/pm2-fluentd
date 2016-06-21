@@ -1,0 +1,21 @@
+{
+  "name": "pm2-fluentd",
+  "version": "1.0.0",
+  "description": "Redirect PM2/apps logs to Fluentd",
+  "main": "app.js",
+  "dependencies": {
+    "fluent-logger": "^1.1.1",
+    "pm2": "^1.1.3",
+    "pmx": "^0.5.0",
+    "request": "^2.72.0"
+  },
+  "apps": [
+    {
+      "merge_logs": true,
+      "max_memory_restart": "200M",
+      "script": "app.js"
+    }
+  ],
+  "author": "bunny.yiu@infinitus-int.com",
+  "license": "MIT"
+}
