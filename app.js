@@ -57,7 +57,7 @@ pm2.launchBus(function(err, bus) {
                 vm_private_ip: VM_PRIVATE_IP,
                 source: 'stdout'
             };
-            logger.log('pm2', data);
+            logger.emit('pm2', data);
         }
     });
 });
