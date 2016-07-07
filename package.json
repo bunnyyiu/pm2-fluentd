@@ -1,6 +1,6 @@
 {
   "name": "pm2-fluentd",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "description": "Redirect PM2/apps logs to Fluentd",
   "main": "app.js",
   "dependencies": {
