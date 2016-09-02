@@ -31,6 +31,7 @@ pm2.launchBus(function(err, bus) {
             log: packet.data,
             vm_id: VM_INSTANCE_ID,
             vm_private_ip: VM_PRIVATE_IP,
+            '@timestamp': new Date().toISOString(),
             source: 'stdout'
         };
         logger.emit(packet.process.name, data);
@@ -41,6 +42,7 @@ pm2.launchBus(function(err, bus) {
             log: packet.data,
             vm_id: VM_INSTANCE_ID,
             vm_private_ip: VM_PRIVATE_IP,
+            '@timestamp': new Date().toISOString(),
             source: 'stderr'
         };
         logger.emit(packet.process.name, data);
@@ -55,6 +57,7 @@ pm2.launchBus(function(err, bus) {
                 log: msg,
                 vm_id: VM_INSTANCE_ID,
                 vm_private_ip: VM_PRIVATE_IP,
+                '@timestamp': new Date().toISOString(),
                 source: 'stdout'
             };
             logger.emit('pm2', data);
